@@ -30,6 +30,9 @@ int main (int argc, char* argv[]){
  * */
 	fprintf(stdout, "Sample Input:\n");
 	number_test_case = enter_number(MIN_TEST_CASE, MAX_TEST_CASE, "Please enter number of test case: ");
+/*
+ *
+ * **/
 	enter_test_cases(number_test_case);
 	hdeeva_out_put();
 	return EXIT_SUCCESS;
