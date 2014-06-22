@@ -11,7 +11,7 @@ static size_t write_data(void *ptr, size_t size, size_t nmemb, void *stream)
   return written;
 }
 int main(int argc, char *argv[]){
-	fprintf(stdout,"Please readme.text, body.out, head.out and evident.png after running.\n");
+	fprintf(stdout,"Please readme.text, body.out, head.out after running.\n");
 	  CURL *curl;
 	  CURLcode res;
 	  static const char *headerfilename = "head.out";
