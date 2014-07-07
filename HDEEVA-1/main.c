@@ -5,7 +5,6 @@
 typedef struct {
 	unsigned long long square;
 	void * next;
-//	.name = "hkgk";
 } LINK_LIST_RESTULT;
 
 LINK_LIST_RESTULT * result = 0;
@@ -24,14 +23,8 @@ void hdeeva_out_put();
 char buffer[MAX_BUFFER];
 
 int main (int argc, char* argv[]){
-/**
- * Enter number of test case:
- * */
-	fprintf(stdout, "Please read readme.text.\n Sample Input:\n");
+	fprintf(stdout, "Please read readme.text.\nSample Input:\n");
 	number_test_case = enter_number(MIN_TEST_CASE, MAX_TEST_CASE, "Please enter number of test case: ");
-/*
- * Start to enter test cases:
- * **/
 	enter_test_cases(number_test_case);
 	hdeeva_out_put();
 	return EXIT_SUCCESS;
@@ -40,7 +33,6 @@ int enter_number(int min, int max, char* message){
 	int num = 0;
 ENTER_NUMBER:
 	memset(buffer, 0, MAX_BUFFER);
-//	fprintf(stdout, "%s", message);
 	fgets(buffer, MAX_BUFFER, stdin);
 	sscanf (buffer,"%d", &num);
 	if(num < min || num > max){
