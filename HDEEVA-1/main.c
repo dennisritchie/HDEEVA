@@ -5,7 +5,9 @@
 typedef struct {
 	unsigned long long square;
 	void * next;
+//	.name = "hkgk";
 } LINK_LIST_RESTULT;
+
 LINK_LIST_RESTULT * result = 0;
 LINK_LIST_RESTULT * last_node = 0;
 #define MIN_TEST_CASE 1
@@ -118,12 +120,14 @@ GET_SQUARE:
 }
 void hdeeva_out_put(){
 	fprintf(stdout, "Sample Output:\n");
-	LINK_LIST_RESTULT * t = result;
+	LINK_LIST_RESTULT * t;
 HDEEVA_OUT_PUT:
+	t = result;
 	if(t != 0){
 		fprintf(stdout, "%lld\n", t->square);
-		t = (LINK_LIST_RESTULT * )t->next;
+		result = (LINK_LIST_RESTULT * )result->next;
+		free(t);
 		goto HDEEVA_OUT_PUT;
 	}
-//Should free here
+	result = 0;
 }
